@@ -8,6 +8,7 @@ let options = [
 let gameSize = prompt("How many games do you want to play?", 3);
 let finalScore = play(options,gameSize);
 console.log(finalScore);
+alert(finalScore);
 console.log("*-----------GAME OVER------------*");
 
 

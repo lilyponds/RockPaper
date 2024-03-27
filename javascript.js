@@ -40,18 +40,18 @@ function decider(output){
         scoreHum+=0;
     }
     };
-    function whoWon(computer, human){
-        let result = [
-            "Tie",
-            "You Won",
-            "Computer Won"
+function whoWon(computer, human){
+    let result = [
+        "Tie",
+        "You Won",
+        "Computer Won"
         ]
-        if(computer==human){
-            return result[0];
-            console.log(result[0]);
-        } else if(computer=='rock'&&human=='scissor'){
-            return result[2];
-            console.log(result[2]);
+    if(computer==human){
+        return result[0];
+        console.log(result[0]);
+    }else if(computer=='rock'&&human=='scissor'){
+        return result[2];
+        console.log(result[2]);
         }else if(computer=='rock'&& human=='paper'){
             return result[1];
             console.log(result[1]);
@@ -73,7 +73,10 @@ function decider(output){
 function game(human){
     computer = computerChoice(options);
     console.log(human);
+    console.log(computer);
+    
     let output = whoWon(computer,human) ;
+    console.log(output);
     decider(output);
     outputString = "Human:" + scoreHum + " Computer:" + scoreComp;
     round.textContent = outputString;
@@ -83,7 +86,7 @@ function game(human){
         scoreComp = 0;
         round.textContent = '';
 
-    }
+    }else {result.textContent = '';}
 }
 
 function finalScore(numHum,numComp){
